@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div class="image-box">
+        <div class="card-box-1">
+          <img
+            src="./images/bg-card-back.png"
+            alt="back-card"
+            class="back-card"
+          />
+          <span class="card-cvv" id="cardCvvDisplay">000</span>
+        </div>
+        <div class="card-box-2">
+          <img src="./images/bg-card-front.png" alt="" class="front-card" />
+          <div class="card-details-box">
+            <img
+              src="./images/card-logo.svg"
+              alt="card-logo"
+              class="card-logo"
+            />
+            <span class="Card-Number" id="cardNumberDisplay"
+              >0000 0000 0000 0000</span
+            >
+            <span class="Card-Name-EXPD"
+              ><span id="cardHolderNameDisplay">JANE APPLESEED</span
+              ><span
+                ><span id="expDateMMDisplay">00</span>/<span
+                  id="expDateYYDisplay"
+                  >00</span
+                ></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <form action="#thanks-box">
+        <div class="input-div">
+          <span class="label-span">
+            <label for="cardHolderNameInput">CARDHOLDER NAME</label>
+          </span>
+          <input
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+            id="cardHolderNameInput"
+            name="cardHolderName"
+            class="cardNumber-Name-Input"
+          />
+        </div>
+        <div class="input-div">
+          <span class="label-span">
+            <label for="cardNumberInput">CARD NUMBER</label></span
+          >
+          <input
+            type="tel"
+            placeholder="e.g. 1234 5678 9123 0000"
+            id="cardNumberInput"
+            name="cardNumber"
+            class="cardNumber-Name-Input"
+            minlength="16"
+            maxlength="16"
+          />
+          <span class="Card-Number-Error-Msg hide-display"
+            >Wrong format, Numbers only</span
+          >
+        </div>
+        <div class="flex input-div">
+          <div class="check">
+            <span class="label-span">
+              <label for="expDateMM">EXP. DATE (MM/YY)</label>
+            </span>
+            <input
+              type="text"
+              placeholder="MM"
+              name="expDateMM"
+              id="expDateMM"
+              class="exp-date-MM"
+              maxlength="2"
+            />
+            <input
+              type="text"
+              name="expDateYY"
+              id="expDateYY"
+              placeholder="YY"
+              class="exp-date-YY exp-date"
+              maxlength="2"
+            />
+            <span class="Date-error-msg hide-display">Can't be blank</span>
+          </div>
+          <div class="CVV-box">
+            <span class="label-span"> <label for="CVV">CVC </label></span
+            ><input
+              type="text"
+              name="CVV"
+              id="CVV"
+              placeholder="e.g. 123"
+              class="CVV"
+              maxlength="3"
+            />
+            <span class="CVV-error-msg hide-display">Can't be blank</span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Confirm</button>
+      </form>
+      <div class="thanks-box" id="thanks-box">
+        <img
+          src="./images/icon-complete.svg"
+          alt="icon-complete"
+          class="icon-complete"
+        />
+        <p class="Thanks">THANK YOU!</p>
+
+        <p class="greet">We've added your card details</p>
+        <button class="continue-btn">Continue</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --input-errors: hsl(0, 100%, 66%);
+  --active-input-border-1: hsl(249, 99%, 64%);
+  --active-input-border-2: hsl(278, 94%, 30%);
+  /* - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+label {
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+}
+
+button {
+  background-color: var(--Very-dark-violet);
+  width: 100%;
+  padding-block: 18px;
+  border-radius: 10px;
+  color: var(--White);
+  font-size: 1.1rem;
+  border: none;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+input {
+  font-size: 1.125rem;
+  font-family: "Space Grotesk", sans-serif;
+  padding-inline: 15px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-image-slice: 1;
+  margin-block-end: 4px;
+}
+
+.input-border {
+  border: 1px solid var(--input-errors);
+}
+
+.image-box {
+  height: 13.75rem;
+  background-image: url(./images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: var(--White);
+  text-transform: uppercase;
+}
+
+.card-box-1 {
+  height: 100%;
+  position: absolute;
+  top: 1.56rem;
+  right: 0.93rem;
+}
+
+.back-card,
+.front-card {
+  height: 70%;
+}
+
+.card-cvv {
+  position: absolute;
+  color: var((--Light-grayish-violet));
+  top: 4.25rem;
+  right: 2.18rem;
+  font-size: 0.75rem;
+}
+
+.card-box-2 {
+  height: 100%;
+  position: absolute;
+  top: 7rem;
+  left: 1.56rem;
+}
+
+.card-details-box {
+  position: absolute;
+  top: 0px;
+  padding-inline: 20px;
+  padding-block: 20px;
+  width: 100%;
+}
+
+.card-logo {
+  height: 20%;
+  width: 25%;
+}
+
+.Card-Number {
+  display: block;
+  margin-block-start: 20px;
+  letter-spacing: 0.15em;
+  word-spacing: 2px;
+}
+
+.Card-Name-EXPD {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 15px;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.Card-Name-EXPD span:first-child {
+  width: 160px;
+  height: 30px;
+}
+
+form {
+  margin-block-start: 80px;
+  margin-block-end: 20px;
+  padding-inline: 20px;
+}
+
+.input-div {
+  margin-block-start: 15px;
+  margin-block-end: 10px;
+}
+
+.label-span {
+  display: block;
+  width: auto;
+  margin-block: 5px;
+}
+
+.cardNumber-Name-Input {
+  width: 100%;
+  padding-block: 11px;
+}
+
+.Card-Number-Error-Msg,
+.Date-error-msg,
+.CVV-error-msg {
+  display: inline-block;
+  font-size: 0.625rem;
+  color: var(--input-errors);
+}
+.check {
+  width: 50%;
+}
+
+.exp-date-MM,
+.exp-date-YY {
+  padding-block: 10px;
+  width: 45%;
+}
+
+.CVV-box {
+  width: 50%;
+}
+
+.CVV {
+  padding-block: 10px;
+  width: 100%;
+}
+
+.submit-btn {
+  margin-block: 12px;
+}
+.thanks-box {
+  display: none;
+  height: 22.81rem;
+  margin-block-start: 80px;
+  padding-inline: 20px;
+  text-align: center;
+  /* background-color: aqua; */
+}
+.icon-complete {
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+  height: 4.3rem;
+}
+
+.Thanks {
+  margin-block-start: 10px;
+  margin-block-end: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.greet {
+  margin-block: 10px;
+  color: var(--Dark-grayish-violet);
+}
+
+.continue-btn {
+  margin-block-start: 35px;
+}
+
+.hide-display {
+  display: none;
+}
+
+@media screen and (min-width: 426px) {
+  main {
+    display: flex;
+  }
+  button {
+    padding-block: 16px;
+  }
+
+  .image-box {
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 29.37rem;
+    height: 42.18rem;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .card-box-1 {
+    height: 13.12rem;
+    width: 24.06rem;
+    position: absolute;
+    top: 22.5rem;
+    left: 15rem;
+  }
+  .card-cvv {
+    position: absolute;
+    top: 5.83rem;
+    right: 3.12rem;
+    font-size: 0.875rem;
+  }
+
+  .card-box-2 {
+    height: 13.12rem;
+    width: 24.06rem;
+    position: absolute;
+    top: 7.5rem; /*170px */
+    left: 11.87rem;
+  }
+
+  .card-details-box {
+    padding-inline: 30px;
+    position: absolute;
+    height: 100%;
+  }
+
+  .card-logo {
+    width: 4.375rem;
+    height: 2.5rem;
+  }
+
+  .front-card,
+  .back-card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Card-Number {
+    margin-block-start: 40px;
+    margin-block-end: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .Card-Name-EXPD {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  form {
+    height: 26.25rem;
+    width: 25rem;
+    margin-inline: auto;
+    margin-block-start: 135px;
+    margin-block-end: auto;
+    padding-block: 15px;
+  }
+
+  .input-div {
+    margin-block: 17px;
+  }
+
+  .Card-Number-Error-Msg,
+  .Date-error-msg,
+  .CVV-error-msg {
+    font-size: 0.68rem;
+  }
+
+  .exp-date-MM,
+  .exp-date-YY {
+    width: 42%;
+  }
+
+  .exp-date {
+    margin-inline-start: 3px;
+  }
+
+  .submit-btn {
+    margin-block: 10px;
+  }
+
+  .thanks-box {
+    text-align: center;
+    height: 26.25rem;
+    width: 25rem;
+    margin-inline: auto;
+    margin-block-start: 140px;
+    margin-block-end: auto;
+    padding-block: 15px;
+  }
+  .icon-complete {
+    margin-block-start: 50px;
+    margin-block-end: 10px;
+    height: 4.375rem;
+  }
+  .Thanks {
+    margin-block-start: 20px;
+    margin-block-end: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+  .greet {
+    margin-block: 10px;
+    color: var(--Dark-grayish-violet);
+  }
+
+  .continue-btn {
+    margin-block-start: 35px;
+  }
+
+  label {
+    font-size: 0.8125rem;
+  }
+}
